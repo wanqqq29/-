@@ -1,12 +1,9 @@
 <template>
   <div class="main">
     <div class="row">
-      <div class="col-6">
+      <div class="col-12">
         <div id="container"></div>
         <div id="P"><PPip PP="ppip" :node="data" /></div>
-      </div>
-      <div class="col-6">
-        <iframe :src="href" frameborder="0" height="100%" width="100%"></iframe>
       </div>
     </div>
   </div>
@@ -59,7 +56,8 @@ export default {
       //添加事件监听，点击跳转
       lf.on("element:click", ({ data, e }) => {
         console.log(data.properties.href);
-        href.value = data.properties.href;
+        // href.value = data.properties.href;
+        openURL(data.properties.href);
       });
     }
     function UrlPing() {
@@ -90,7 +88,6 @@ export default {
       init();
     }
     onMounted(() => {
-      // UrlPing();
       LoadLs();
     });
 

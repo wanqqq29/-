@@ -4,6 +4,11 @@
       <div height="30">
         <q-toggle v-model="ndata.mapflag" label="MiniMap"> </q-toggle>
         <q-btn color="primary" rounded @click="SaveLs()">保存修改 </q-btn>
+        <q-btn color="primary" rounded @click="exportJson()">导出到JSON </q-btn>
+
+        <q-btn color="primary" rounded @click="getdata()"
+          >从json导入数据
+        </q-btn>
       </div>
 
       <div class="row" style="height: 100%">
@@ -382,17 +387,32 @@ export default {
     function handleDoenload() {
       lf.getSnapshot();
     }
-    //导出json数据
-    // function exportJson() {
-    //   const adapterData = lf.getGraphData();
-    //   download("logic-flow.json", JSON.stringify(adapterData));
-    //   console.log(adapterData);
-    // }
+    // 导出json数据
+    function exportJson() {
+      alert("将导出的文件改名为data.json放在目录下替换data.JSON");
+      const adapterData = lf.getGraphData();
+      download("logic-flow.json", JSON.stringify(adapterData));
+      console.log(adapterData);
+    }
 
     //保存数据到LocalStorage 使用LocalStorage保存数据进行可持续化 替代读取本地文件
     function SaveLs() {
       const adapterData = lf.getGraphData();
       localStorage.setItem("data", JSON.stringify(adapterData));
+    }
+
+    function getdata() {
+      api
+        .get("data.json")
+        .then((response) => {
+          data.nodes = response["data"]["nodes"];
+          data.edges = response["data"]["edges"];
+          console.log(data.nodes);
+          draw();
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     }
 
     // minimap 开关
@@ -420,6 +440,8 @@ export default {
       handleDoenload,
       SaveLs,
       LoadLs,
+      getdata,
+      exportJson,
     };
   },
 };

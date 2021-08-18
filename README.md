@@ -6,10 +6,10 @@
 数据采用LocalStorage存储在浏览器缓存 https://www.runoob.com/jsref/prop-win-localstorage.html
 ping功能调用ping.js库 https://github.com/alfg/ping.js
 
+![image-20210818171000471](http://markdowntc.wanqqq29.cn//image-20210818171000471.png)![image-20210818171018091](http://markdowntc.wanqqq29.cn//image-20210818171018091.png)
 
 
-
-# Quasar App (networktop)
+# Quasar Ap![image-20210818171011579](C:\Users\Aris\AppData\Roaming\Typora\typora-user-images\image-20210818171011579.png)p (networktop)
 
 A Quasar Framework app
 
@@ -31,5 +31,4 @@ quasar build
 
 ### Customize the configuration
 See [Configuring quasar.conf.js](https://v2.quasar.dev/quasar-cli/quasar-conf-js).
-
 
