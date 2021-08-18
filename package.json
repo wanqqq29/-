@@ -1,0 +1,44 @@
+{
+  "name": "networktop",
+  "version": "0.0.1",
+  "description": "A Quasar Framework app",
+  "productName": "Quasar App",
+  "author": "启彤 栾 <wanqqq29@gmail.com>",
+  "private": true,
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "@logicflow/core": "^0.6.12",
+    "@quasar/extras": "^1.0.0",
+    "axios": "^0.21.1",
+    "core-js": "^3.6.5",
+    "dgram": "^1.0.1",
+    "internet-available": "^1.0.0",
+    "os": "^0.1.2",
+    "ping.js": "^0.3.0",
+    "quasar": "^2.0.0",
+    "util": "^0.12.4",
+    "vuex": "^4.0.1"
+  },
+  "devDependencies": {
+    "@quasar/app": "^3.0.0",
+    "@types/node": "^10.17.15"
+  },
+  "browserslist": [
+    "last 10 Chrome versions",
+    "last 10 Firefox versions",
+    "last 4 Edge versions",
+    "last 7 Safari versions",
+    "last 8 Android versions",
+    "last 8 ChromeAndroid versions",
+    "last 8 FirefoxAndroid versions",
+    "last 10 iOS versions",
+    "last 5 Opera versions"
+  ],
+  "engines": {
+    "node": ">= 12.22.1",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}
